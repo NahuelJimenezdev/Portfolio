@@ -73,3 +73,20 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(type, delay.newText + 250);
   }
 })
+
+
+
+/*Formulario*/
+document.querySelector('#hablemos').addEventListener('click', function() {
+    
+  let nombreInteresado = document.getElementById('full-name').value;
+  console.log(nombreInteresado);
+  let asuntoMensaje = document.getElementById('asunto').value;
+  console.log(asuntoMensaje);
+  let mensaje = document.getElementById('message').value;
+  console.log(asuntoMensaje);
+
+  let url = "https://api.whatsapp.com/send?phone=5491166582695&text=*_Nombre:_* " + nombreInteresado + ", *_Asunto_*: " + asuntoMensaje + ", *_Mensaje_*: " + mensaje;
+
+  window.open(url);
+})
